@@ -31,7 +31,7 @@ Now you can proceed as follows:
 ```rust
 /*
   A password with 20 characters is generated.
-  It consists of lowercase letters (default),
+  It contains lowercase letters (default),
   uppercase letters, numbers and symbols.
 */
 let password = pwg::new(20, &["uppercase", "numbers", "symbols"]);
@@ -51,7 +51,7 @@ println!("{}", password);
 ```rust
 /*
   A password with 20 characters is generated.
-  It contains of lowercase letters (default) and uppercase letters.
+  It contains lowercase letters (default) and uppercase letters.
 */
 let password = pwg::new(20, &["uppercase"]);
 println!("{}", password);
@@ -62,7 +62,7 @@ println!("{}", password);
 ```rust
 /*
   A password with 20 characters is generated.
-  It contains of lowercase letters (default) and numbers.
+  It contains lowercase letters (default) and numbers.
 */
 let password = pwg::new(20, &["numbers"]);
 println!("{}", password);
@@ -73,7 +73,7 @@ println!("{}", password);
 ```rust
 /*
   A password with 20 characters is generated.
-  It contains of lowercase letters (default) and symbols.
+  It contains lowercase letters (default) and symbols.
 */
 let password = pwg::new(20, &["symbols"]);
 println!("{}", password);
