@@ -1,0 +1,20 @@
+[package]
+name = "pwg"
+version = "0.1.0"
+authors = ["Dirk Einecke"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/dirkeinecke/pwg"
+documentation = "https://docs.rs/pwg/0.1.0/pwg/"
+homepage = "https://crates.io/crates/pwg"
+edition = "2018"
+description = "With pwg you can easily create random passwords. You can specify how long the password should be and whether it should also contain capital letters, numbers and special characters."
+keywords = ["password", "random", "security", "generator", "crypto"]
+categories = ["algorithms", "cryptography", "development-tools"]
+exclude = ["/.travis.yml", ".gitignore"]
+
+[badges]
+travis-ci = { repository = "dirkeinecke/pwg" }
+
+[dependencies]
+rand = "0.6.5"
