@@ -79,6 +79,10 @@ let password = pwg::new(20, &["symbols"]);
 println!("{}", password);
 ```
 
+## Versions
+
+A detailed [changelog](CHANGELOG.md) is available.
+
 ## Getting help
 
 If you have questions or problems with `pwg`, then we are happy to respond to [GitHub issues](https://github.com/dirkeinecke/pwg/issues/new) or come chat with us on our [Gitter channel](https://gitter.im/pwg-rs/community) - if you have any questions about the project, or just want to say hi!
