@@ -80,34 +80,21 @@ pub fn new(length: usize, ingredients: &[&str]) -> String {
     while password.len() < length {
         let mut random_strings = ["", "", "", ""];
 
-        {
-            let random_number = rng.gen_range(0, pool.lowercase_letters.len());
-            random_strings[0] = pool.lowercase_letters[random_number];
+        random_strings[0] = pool.lowercase_letters.choose(&mut rng).unwrap();
+
+        if ingredients.contains(&"uppercase") {
+            random_strings[1] = pool.uppercase_letters.choose(&mut rng).unwrap();
         }
 
-        {
-            if ingredients.contains(&"uppercase") {
-                let random_number = rng.gen_range(0, pool.uppercase_letters.len());
-                random_strings[1] = pool.uppercase_letters[random_number];
-            }
+        if ingredients.contains(&"numbers") {
+            random_strings[2] = pool.numbers.choose(&mut rng).unwrap();
         }
 
-        {
-            if ingredients.contains(&"numbers") {
-                let random_number = rng.gen_range(0, pool.numbers.len());
-                random_strings[2] = pool.numbers[random_number];
-            }
+        if ingredients.contains(&"symbols") {
+            random_strings[3] = pool.symbols.choose(&mut rng).unwrap();
         }
 
-        {
-            if ingredients.contains(&"symbols") {
-                let random_number = rng.gen_range(0, pool.symbols.len());
-                random_strings[3] = pool.symbols[random_number];
-            }
-        }
-
-        let random_number = rng.gen_range(0, random_strings.len());
-        let random_character = random_strings[random_number];
+        let random_character = random_strings.choose(&mut rng).unwrap();
 
         password.push_str(random_character);
     }
