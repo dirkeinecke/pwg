@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Remove dependency on `rand`
 
+## [0.1.1] - 2019-04-14
+
+### Changes
+
+- Improved the internal selection of an element from the pool.
+
 ## [0.1.0] - 2019-04-06
 
 - Initial release
